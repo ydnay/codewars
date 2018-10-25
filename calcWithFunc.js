@@ -14,3 +14,19 @@
 // The most outer function represents the left operand, the most inner function represents the right operand
 // Divison should be integer division,
 // e.g eight(dividedBy(three()))/eight(divided_by(three)) should return 2, not 2.666666...
+
+// const sum = function(num) {
+//   return 2;
+// }
+
+// const one = function(f) {
+//   if (f) {
+//     return 1 
+//   }
+// }
+
+// const two = function(f) {
+//   return f + 0;
+// }
+
+console.log(zero(sum()));
