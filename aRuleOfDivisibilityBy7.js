@@ -25,12 +25,8 @@
 //   language) of numbers, the first being the last number m with at most 2 digits obtained by your function 
 //   (this last m will be divisible or not by 7), the second one being the number of steps to get the result.
 
-function seven(m) {
-  let str = m.toString();
-  while(str.length > 2) {
-    str.split('').pop();
-  }
-}
+const seven = (m, n = 0) => m < 100 ? [m, n] : seven(Math.floor(m/10) - 2 * (m % 10), ++n);
 
-console.log(seven(371));
-console.log(typeof(seven(371)));
+console.log(seven(371));        // [35, 1]
+console.log(seven(1603));       // [7, 2]
+console.log(seven(477557101));  // [28, 7]
